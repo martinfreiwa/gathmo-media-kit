@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Media Moderation Workflow - Gathmo Reference</title>
+    <meta name="description" content="A practical moderation model for guest photos, videos, and voice messages at weddings, parties, and corporate events.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="card">
+      <img src="assets/gathmo-logo-icon.svg" alt="Gathmo logo">
+      <p class="eyebrow">Operations reference</p>
+      <h1>A moderation workflow for guest-created event media</h1>
+      <p>
+        Guest uploads and public display are separate decisions. An event can accept a
+        contribution successfully while holding it for host review before it appears
+        in an album or live wall. Treating those states independently prevents guests
+        from retrying an upload simply because it is not visible yet.
+      </p>
+      <h2>Useful moderation states</h2>
+      <ul>
+        <li><strong>Received:</strong> the original file and contribution metadata are stored.</li>
+        <li><strong>Pending:</strong> the item is waiting for a host or moderator decision.</li>
+        <li><strong>Approved:</strong> the item may appear in the intended event surface.</li>
+        <li><strong>Hidden:</strong> the item remains retained according to policy but is not shown.</li>
+        <li><strong>Removed:</strong> the item has entered a documented deletion workflow.</li>
+      </ul>
+      <p>
+        Moderators need enough context to make a decision: media preview, submission
+        time, event, contribution type, and the current visibility state. Batch actions
+        are useful during busy events, but every state change should remain reversible
+        until a deliberate deletion step.
+      </p>
+      <h2>Live-display safeguards</h2>
+      <p>
+        A live wall should consume only approved items. If moderation falls behind,
+        the display can rotate through already approved media rather than showing an
+        unreviewed queue. Hosts should also be able to pause the display independently
+        from guest uploads.
+      </p>
+      <p>
+        Gathmo applies this separation to event contribution and presentation. See the
+        <a href="https://gathmo.com/corporate">Gathmo corporate event workflow</a>
+        for the product context.
+      </p>
+      <p><a href="index.html">Back to the Gathmo media kit</a></p>
+    </main>
+  </body>
+</html>

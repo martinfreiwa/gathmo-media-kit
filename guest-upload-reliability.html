@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reliable Guest Uploads at Live Events - Gathmo Reference</title>
+    <meta name="description" content="A practical reference for reliable browser-based guest photo and video uploads on congested event networks.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="card">
+      <img src="assets/gathmo-logo-icon.svg" alt="Gathmo logo">
+      <p class="eyebrow">Workflow reference</p>
+      <h1>Reliable guest uploads on unpredictable event Wi-Fi</h1>
+      <p>
+        Live-event upload flows operate under conditions that office testing rarely
+        reproduces: hundreds of phones share one access point, guests move between
+        rooms, and mobile browsers are backgrounded without warning. A dependable
+        workflow therefore needs more than a file picker and a spinner.
+      </p>
+      <h2>Recommended state model</h2>
+      <ol>
+        <li><strong>Selected:</strong> the browser has access to the local file.</li>
+        <li><strong>Preparing:</strong> size, type, and optional image processing are checked.</li>
+        <li><strong>Transferring:</strong> bytes move to storage with bounded retries.</li>
+        <li><strong>Confirming:</strong> the application records the uploaded object.</li>
+        <li><strong>Complete:</strong> the server returns the canonical media record.</li>
+      </ol>
+      <p>
+        The confirmation step should be idempotent so that a lost response does not
+        create duplicate media. Progress should reserve its final state for server
+        confirmation rather than assuming that a completed byte transfer is the same
+        as a completed application record.
+      </p>
+      <h2>Guest-facing guidance</h2>
+      <p>
+        Error messages should explain whether the selected file is still available,
+        whether retrying is safe, and whether closing the tab cancels the transfer.
+        For large videos, resumable or multipart uploads prevent a brief connection
+        loss from restarting the entire file.
+      </p>
+      <p>
+        This reliability model supports the browser-based guest contribution flow in
+        <a href="https://gathmo.com/how-it-works">Gathmo's event media workflow</a>,
+        where guests can contribute without installing an app.
+      </p>
+      <p><a href="index.html">Back to the Gathmo media kit</a></p>
+    </main>
+  </body>
+</html>

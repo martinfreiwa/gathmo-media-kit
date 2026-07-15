@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible Browser Uploads for Event Guests - Gathmo Reference</title>
+    <meta name="description" content="Accessibility notes for browser-based event photo, video, and audio upload interfaces.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="card">
+      <img src="assets/gathmo-logo-icon.svg" alt="Gathmo logo">
+      <p class="eyebrow">Accessibility reference</p>
+      <h1>Accessible browser uploads for event guests</h1>
+      <p>
+        Event upload pages serve a broad, temporary audience. Guests may be using an
+        unfamiliar phone, a screen reader, larger text, reduced motion, or one hand in
+        a crowded venue. The upload path should work without requiring prior product
+        knowledge.
+      </p>
+      <h2>Interaction essentials</h2>
+      <ul>
+        <li>Associate every file input and text field with a persistent label.</li>
+        <li>Keep the primary action reachable by keyboard and visible at large text sizes.</li>
+        <li>Announce validation, progress, and completion changes to assistive technology.</li>
+        <li>Do not rely on color alone to communicate upload or moderation status.</li>
+        <li>Preserve focus when an item changes from transferring to complete.</li>
+      </ul>
+      <h2>Media-specific details</h2>
+      <p>
+        File-size and format limits should be visible before selection. Image previews
+        need meaningful controls even when the image itself has no useful alternative
+        description yet. Audio and video contributions should expose duration and a
+        clear way to remove or replace the selected item before submission.
+      </p>
+      <p>
+        Error recovery is part of accessibility. Use specific messages, retain the
+        selected file when retrying is possible, and avoid time-limited dialogs that
+        disappear before a guest can understand them.
+      </p>
+      <p>
+        These principles inform the no-install contribution path on the
+        <a href="https://gathmo.com/">Gathmo event media platform</a>.
+      </p>
+      <p><a href="index.html">Back to the Gathmo media kit</a></p>
+    </main>
+  </body>
+</html>
